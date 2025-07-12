@@ -22,11 +22,10 @@ func changeBook2(book *Book) {
 }
 
 func main() {
-	/*
-		var a myint = 10
+
+	/*	var a myint = 10
 		fmt.Println("a = ", a)
-		fmt.Printf("type of a = %T\n", a)
-	*/
+		fmt.Printf("type of a = %T\n", a)*/
 
 	var book1 Book
 	book1.title = "Golang"

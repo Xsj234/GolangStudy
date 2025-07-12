@@ -12,7 +12,7 @@ func main() {
 	}
 
 	//在使用map前， 需要先用make给map分配数据空间
-	myMap1 = make(map[string]string, 10)
+	myMap1 = make(map[string]string, 3)
 
 	myMap1["one"] = "java"
 	myMap1["two"] = "c++"

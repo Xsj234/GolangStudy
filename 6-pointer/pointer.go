@@ -14,6 +14,7 @@ func swap(a int ,b int) {
 func swap(pa *int, pb *int) {
 	var temp int
 	temp = *pa //temp = main::a
+	fmt.Println("temp", temp)
 	*pa = *pb  // main::a = main::b
 	*pb = temp // main::b = temp
 }

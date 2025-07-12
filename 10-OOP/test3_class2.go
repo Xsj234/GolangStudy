@@ -7,6 +7,10 @@ type Human struct {
 	sex  string
 }
 
+func (this *Hero) Eat() {
+	fmt.Println("Human.Eat()...")
+}
+
 func (this *Human) Eat() {
 	fmt.Println("Human.Eat()...")
 }

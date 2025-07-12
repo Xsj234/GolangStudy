@@ -17,7 +17,7 @@ func main() {
 
 	//copy 可以将底层数组的slice一起进行拷贝
 	s2 := make([]int, 3) //s2 = [0,0,0]
-
+	s2[0] = 10
 	//将s中的值 依次拷贝到s2中
 	copy(s2, s)
 	fmt.Println(s2)
