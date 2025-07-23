@@ -33,6 +33,7 @@ func (c *Hero) Show() {
 }
 
 func (this *Hero) GetName() string {
+	//引用的指针
 	return this.Name
 }
 
@@ -44,12 +45,12 @@ func (h *Hero) SetName(newName string) {
 func main() {
 	//创建一个对象
 	hero := Hero{Name: "zhang3", Ad: 100, level: 1}
+	hero1 := Hero{Name: "ss", Ad: 11, level: 2}
+	hero1.Show()
 	hero.level = 2
 	hero.Show()
 
 	hero.SetName("li4")
 
 	hero.Show()
-
-	hero.Eat()
 }

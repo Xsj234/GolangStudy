@@ -12,9 +12,10 @@ func swap(a int ,b int) {
 */
 
 func swap(pa *int, pb *int) {
+	fmt.Printf("pa = %v , pb = %v \n", pa, pb)
 	var temp int
-	temp = *pa //temp = main::a
-	fmt.Println("temp", temp)
+	temp = *pa //temp = main::a 取指针指向的值
+	fmt.Println(temp)
 	*pa = *pb  // main::a = main::b
 	*pb = temp // main::b = temp
 }

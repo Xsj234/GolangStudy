@@ -4,6 +4,7 @@ import "fmt"
 
 // 本质是一个指针
 type AnimalIF interface {
+	Name()
 	Sleep()
 	GetColor() string //获取动物的颜色
 	GetType() string  //获取动物的种类
@@ -26,6 +27,8 @@ func (this *Cat) GetType() string {
 	return "Cat"
 }
 
+func (this *Cat) Name() { fmt.Print(123) }
+
 // 具体的类
 type Dog struct {
 	color string
@@ -42,6 +45,8 @@ func (this *Dog) GetColor() string {
 func (this *Dog) GetType() string {
 	return "Dog"
 }
+
+func (this *Dog) Name() { fmt.Print(234) }
 
 func showAnimal(animal AnimalIF) {
 	animal.Sleep() //多态
@@ -65,4 +70,5 @@ func main() {
 
 	showAnimal(&cat)
 	showAnimal(&dog)
+
 }
