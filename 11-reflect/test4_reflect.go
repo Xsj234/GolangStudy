@@ -6,12 +6,11 @@ import (
 )
 
 func reflectNum(arg interface{}) {
-	fmt.Println("type : ", reflect.TypeOf(arg))
-	fmt.Println("value : ", reflect.ValueOf(arg))
+	fmt.Println("type:", reflect.TypeOf(arg))
+	fmt.Println("value:", reflect.ValueOf(arg))
 }
 
 func main() {
-	var num float64 = 1.2345
-
-	reflectNum(num)
+	var a int64 = 2222
+	reflectNum(a)
 }

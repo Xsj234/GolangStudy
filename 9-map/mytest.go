@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Expose struct {
 	IsExpose bool  `json:"is_expose" bson:"is_expose"`
 	Ut       int64 `json:"ut" bson:"ut"`
@@ -50,14 +52,12 @@ type GetItemsByMediaIdData struct {
 }
 
 func main() {
-
-	var Rid *int64
-	var mediaIdPid = make([]*MaterialGetIFloderParam, 0)
-	mediaIdPid = append(mediaIdPid, &MaterialGetIFloderParam{
-		Pid:      *Rid, //评论所属的帖子id
-		MediaIds: []int64{111},
-	})
-
+	//var data GetItemsByMediaIdData
+	var mediaIdFolderMap = make(map[int64]*MediaIdFolderData)
+	if data, ok := mediaIdFolderMap[111]; ok {
+		folder := data.Folder
+		fmt.Println(folder)
+	}
 }
 
 type MaterialGetIFloderParam struct {

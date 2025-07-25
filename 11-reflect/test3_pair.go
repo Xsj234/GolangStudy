@@ -24,12 +24,12 @@ func (this *Book) WriteBook() {
 
 func main() {
 	//b: pair<type:Book, value:book{}地址>
-	b := &Book{}
+	b := Book{}
 
 	//r: pair<type:, value:>
 	var r Reader
 	//r: pair<type:Book, value:book{}地址>
-	r = b
+	r = &b
 
 	r.ReadBook()
 

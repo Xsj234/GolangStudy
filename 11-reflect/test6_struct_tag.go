@@ -7,7 +7,7 @@ import (
 
 type resume struct {
 	Name string `info:"name" doc:"我的名字"`
-	Sex  string `info:"sex"`
+	Sex  string `info:"sex" json:"xxx" bson:"111"`
 }
 
 func findTag(str interface{}) {
@@ -16,7 +16,9 @@ func findTag(str interface{}) {
 	for i := 0; i < t.NumField(); i++ {
 		taginfo := t.Field(i).Tag.Get("info")
 		tagdoc := t.Field(i).Tag.Get("doc")
-		fmt.Println("info: ", taginfo, " doc: ", tagdoc)
+		tagjson := t.Field(i).Tag.Get("json")
+		tagbson := t.Field(i).Tag.Get("bson")
+		fmt.Println("info: ", taginfo, " doc: ", tagdoc, " json: ", tagjson, " bson: ", tagbson)
 	}
 }
 

@@ -22,7 +22,7 @@ func main() {
 	time.Sleep(2 * time.Second)
 
 	for i := 0; i < 4; i++ {
-		num := <-c //从c中接收数据，并赋值给num
+		num := <-c //从c中接收数据，并赋值给num 依次接收数据
 		fmt.Println("num = ", num)
 	}
 

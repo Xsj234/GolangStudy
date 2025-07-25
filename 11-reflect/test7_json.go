@@ -6,10 +6,10 @@ import (
 )
 
 type Movie struct {
-	Title  string   `json:"title"`
-	Year   int      `json:"year"`
-	Price  int      `json:"rmb"`
-	Actors []string `json:"actors"`
+	Title  string   `json:"title" bson:"title"`
+	Year   int      `json:"year" bson:"year"`
+	Price  int      `json:"rmb" bson:"price"`
+	Actors []string `json:"actors" bson:"actors"`
 }
 
 func main() {
@@ -24,9 +24,10 @@ func main() {
 
 	fmt.Printf("jsonStr = %s\n", jsonStr)
 
+	//var jsonStr1 []byte
 	//解码的过程 jsonstr ---> 结构体
 	//jsonStr = {"title":"喜剧之王","year":2000,"rmb":10,"actors":["xingye","zhangbozhi"]}
-	myMovie := Movie{}
+	var myMovie = Movie{}
 	err = json.Unmarshal(jsonStr, &myMovie)
 	if err != nil {
 		fmt.Println("json unmarshal error ", err)

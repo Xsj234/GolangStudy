@@ -15,8 +15,9 @@ func main() {
 		func() {
 			defer fmt.Println("B.defer")
 			//退出当前goroutine
-			runtime.Goexit()
+			//return
 			fmt.Println("B")
+			runtime.Goexit()
 		}()
 
 		fmt.Println("A")
